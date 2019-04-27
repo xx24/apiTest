@@ -18,7 +18,7 @@ class Test_Lagou(unittest.TestCase):
 	def test_001(self,row=1):
 		'''检查期望值与实际值是否相等'''
 		r=self.method.postMethod(row,self.json.getJsonData(row))
-		if self.isAssert.isContent(row,r.json()['state']):
+		if self.isAssert.isContent(row,r.json()['msg']):
 			self.excel.writeResult(row, 'pass')
 		else:
 			self.excel.writeResult(row, 'fail')
